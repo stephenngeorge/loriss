@@ -1,0 +1,27 @@
+{
+  "name": "loriss",
+  "version": "1.0.0",
+  "description": "css framework",
+  "style": "index.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "framework",
+    "ui",
+    "loris",
+    "loriss",
+    "loriscss"
+  ],
+  "author": "stephen pal geeorge",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.13.0"
+  }
+}

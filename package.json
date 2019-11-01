@@ -1,8 +1,8 @@
 {
   "name": "loriss",
-  "version": "1.1.0",
+  "version": "3.0.0",
   "description": "css framework",
-  "style": "index.css",
+  "style": "index.scss",
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production gulp"
   },
@@ -24,15 +24,20 @@
     "gulp-sourcemaps": "^2.6.5",
     "node-sass": "^4.13.0"
   },
-  "main": "dist/index.css",
-  "module": "dist/index.css",
+  "main": "dist/index.scss",
+  "module": "dist/index.scss",
   "files": [
     "dist",
+    "css",
     "src",
     "README.md"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/stephenngeorge/loriss"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-scss-combine": "^1.0.0"
   }
 }

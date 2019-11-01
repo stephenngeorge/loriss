@@ -17,7 +17,7 @@
   ],
   "author": "stephen pal geeorge",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",

@@ -18,15 +18,6 @@ Or import in a js file. For example in a React project, add this line
 near the top of App.js:
 `import "loriss"`
 
-## CSS import
-For the compiled css output, use the following import statement in your 
-main .css file:
-`@import "~loriss/css/index.css";`
-
-
-_in many of the above cases, you will need a tool such as webpack 
-configured to resolve the node_modules file paths_
-
 You can then use all the loriss styles in your sass code:
 ```
 h1 {
@@ -39,6 +30,15 @@ or in your markup:
 ```
 <h1 class="color--complementary font-family--serif">Loriss</h1>
 ```
+
+## CSS import
+For the compiled css output, use the following import statement in your 
+main .css file:
+`@import "~loriss/css/index.css";`
+
+
+_in many of the above cases, you will need a tool such as webpack 
+configured to resolve the node_modules file paths_
 
 ### src files
 You also have access to all of the source files if you only want to 

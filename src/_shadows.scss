@@ -3,7 +3,7 @@
 /// @see './variables'
 ///
 @each $shadowType, $shadowValue in $shadows {
-  .shadow--#{shadowType} {
+  .shadow--#{$shadowType} {
       box-shadow: $shadowValue;
   }
 }

@@ -4,7 +4,8 @@
   "description": "css framework",
   "style": "index.scss",
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production gulp"
+    "build": "rm -rf dist && NODE_ENV=production gulp",
+    "deploy": "npm run build && npm publish"
   },
   "keywords": [
     "css",

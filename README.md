@@ -60,6 +60,18 @@ h1 {
 }
 ```
 
+## Overwriting
+You can overwrite any of the variables in the loriss library. All variables 
+and maps have their values set as !default. This means, if you declare your own 
+value for a particular variable **before** you include loriss, your value will 
+be preffered to one we set in the variables file. For example:
+```
+$color--main: #FD837B;
+@import 'loriss';
+```
+The above code would also mean any other classes, mixins or variables in loriss 
+that depend on `$color--main` would be updated accordingly.
 
 ## Resets
-Loriss includes some global css resets. If you want to use your own resets you should make sure you include loriss before your own styles. 
+Loriss includes some global css resets. If you want to use your own resets 
+you should make sure you include loriss before your own styles. 

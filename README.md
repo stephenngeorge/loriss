@@ -46,7 +46,7 @@ import a subset of loriss styles. For example, to just get the
 variables, include this line in your sass file:
 `@import '~loriss/src/variables'`
 
-You then be able to do stuff like this:
+You'll then be able to do stuff like this:
 ```
 h1 {
     color: $color--secondary;

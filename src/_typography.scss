@@ -60,10 +60,10 @@ $font-sizes-display: (
 /// ["main", "complementary", "secondary", "dark", "light"]
 @each $color, $hex in $theme-colors {
   .title__padded-text--#{$color} {
-    @include padded-text($hex, .6, 1, 1.4);
+    @include padded-text($hex, .6, 1, 1.5);
   }
 
   .body__padded-text--#{$color} {
-    @include padded-text($hex, .4, .8, 1.2);
+    @include padded-text($hex, .4, .8, 1.6);
   }
 }

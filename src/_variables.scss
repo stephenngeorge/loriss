@@ -109,9 +109,8 @@ $black-80:                  rgba(0, 0, 0, .8);
 /// @type Color
 $black-90:                  rgba(0, 0, 0, .9);
 
-
 /// @type Map
-$theme-colors: (
+$loris-colors: (
   "main": $color--main,
   "complementary": $color--complementary,
   "secondary": $color--secondary,
@@ -120,6 +119,12 @@ $theme-colors: (
   "mid": $color--mid,
   "light": $color--light
 ) !default;
+
+/// @type Map
+$colors: () !default;
+
+/// @type Map
+$theme-colors: map-merge($loris-colors, $colors) !default;
 
 /*  ******
 ----------

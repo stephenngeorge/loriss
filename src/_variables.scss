@@ -47,7 +47,7 @@ $loris-font-weights: (
 $font-weights: () !default;
 
 /// @type Map
-$theme-font-weights: map-merge($loris-font-weights, font-weights) !default;
+$theme-font-weights: map-merge($loris-font-weights, $font-weights) !default;
 
 /*  ******
 ----------

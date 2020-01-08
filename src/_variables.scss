@@ -17,11 +17,17 @@ $font-family-serif:         'Playfair Display', Courier, serif !default;
 $font-family-cursive:       'Lovers Quarrel', cursive !default;
 
 /// @type Map
-$font-families: (
+$loris-font-families: (
   "sans-serif": $font-family-sans-serif,
   "serif": $font-family-serif,
   "cursive": $font-family-cursive
 ) !default;
+
+/// @type Map
+$font-families: () !default;
+
+/// @type Map
+$theme-font-families: map-merge($loris-font-families, $font-families) !default;
 
 /// @type Number
 $font-weight-light:         300 !default;
@@ -31,11 +37,17 @@ $font-weight-normal:        400 !default;
 $font-weight-heavy:         700 !default;
 
 /// @type Map
-$font-weights: (
+$loris-font-weights: (
   "light": $font-weight-light,
   "normal": $font-weight-normal,
   "heavy": $font-weight-heavy
 ) !default;
+
+/// @type Map
+$font-weights: () !default;
+
+/// @type Map
+$theme-font-weights: map-merge($loris-font-weights, font-weights) !default;
 
 /*  ******
 ----------
@@ -61,13 +73,18 @@ $font-sizes-headings: (
   "h6": $font-size-base * 1
 ) !default;
 
-
 /// @type Map
-$font-sizes: (
+$loris-font-sizes: (
   "base": $font-size-base,
   "lead": $font-size-lead,
   "small": $font-size-small
 ) !default;
+
+/// @type Map
+$font-sizes: () !default;
+
+/// @type Map
+$theme-font-sizes: map-merge($loris-font-sizes, $font-sizes) !default;
 
 /*  ******
 ----------
@@ -143,13 +160,19 @@ $shadow-bottom:             0 3px 6px 0 $black-50 !default;
 $shadow-top:                0 -3px 6px 0 $black-50 !default;
 
 /// @type Map
-$shadows: (
+$loris-shadows: (
   "base": $base-shadow,
   "right": $shadow-right,
   "left": $shadow-left,
   "bottom": $shadow-bottom,
   "top": $shadow-top
 ) !default;
+
+/// @type Map
+$shadows: () !default;
+
+/// @type Map
+$theme-shadows: map-merge($loris-shadows, $shadows) !default;
 
 /*  ******
 ----------
@@ -169,12 +192,18 @@ $breakpoint-lg:             992px !default;
 $breakpoint-xl:             1248px !default;
 
 /// @type Map
-$breakpoints: (
+$loris-breakpoints: (
   "sm": $breakpoint-sm,
   "md": $breakpoint-md,
   "lg": $breakpoint-lg,
   "xl": $breakpoint-xl
 ) !default;
+
+/// @type Map
+$breakpoints: () !default;
+
+/// @type Map
+$theme-breakpoints: map-merge($loris-breakpoints, $breakpoints) !default;
 
 // ------- ZINDEX
 
@@ -184,3 +213,16 @@ $zindex-foreground:         500 !default;
 $zindex-behind:             -10 !default;
 /// @type Number
 $zindex-background:         -500 !default;
+
+/// @type Map
+$loris-zindex: (
+  "foreground": $zindex-foreground,
+  "behind": $zindex-behind,
+  "background": $zindex-background
+) !default;
+
+/// @type Map
+$zindex: () !default;
+
+/// @type Map
+$theme-zindex: map-merge($loris-zindex, $zindex) !default;

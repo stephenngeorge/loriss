@@ -26,29 +26,30 @@ $font-sizes-display: (
 }
 
 /// @see './variables.scss'
-/// @require $font-sizes
-/// $font-sizes includes: 
+/// @require $theme-font-sizes
+/// $theme-font-sizes includes: 
 /// ["base", "lead", "small"]
-@each $size, $value in $font-sizes {
+@each $size, $value in $theme-font-sizes {
   .text--#{$size} {
     font-size: $value;
   }
 }
 
-/// @require './variables.scss
-/// $font-families includes:
+/// @see './variables.scss
+/// @require $theme-font-families
+/// $theme-font-families includes:
 /// ["sans-serif", "serif", "cursive"]
-@each $family, $name in $font-families {
+@each $family, $name in $theme-font-families {
   .font-family--#{$family} {
     font-family: $name;
   }
 }
 
 /// @see './variables.scss'
-/// @require $font-weights
-/// $font-weights includes:
+/// @require $theme-font-weights
+/// $theme-font-weights includes:
 /// ["light", "normal", "heavy"]
-@each $weight, $value in $font-weights {
+@each $weight, $value in $theme-font-weights {
   .font-weight--#{$weight} {
     font-weight: $value;
   }

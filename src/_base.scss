@@ -37,7 +37,7 @@ HEADINGS
 ----------
 ******  */
 /// @require $font-sizes-headings
-/// @see './typography.scss'
+/// @see './variables.scss'
 ///
 @each $tag, $size in $font-sizes-headings {
   #{$tag} {
@@ -45,7 +45,7 @@ HEADINGS
   }
 }
 
-/// @require $font-familt-serif
+/// @require $font-family-serif
 /// @see './variables.scss'
 ///
 h1, h2,

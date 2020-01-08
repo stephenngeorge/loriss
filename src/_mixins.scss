@@ -9,12 +9,12 @@
 /// @content
 /// @author stephen pal-george
 /// @group layout
-/// @require $breakpoints
+/// @require $theme-breakpoints
 ///
-/// @param {string} $size - one from the $breakpoints map
+/// @param {string} $size - one from the $theme-breakpoints map
 ///
 @mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
+  @media (min-width: map-get($theme-breakpoints, $size)) {
     @content;
   }
 }

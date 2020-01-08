@@ -14,8 +14,10 @@
     flex-wrap: wrap;
   }
   
+  /// @require $theme-breakpoints
+  /// @see 'variables.scss'
   .container {
-    max-width: map-get($map: $breakpoints, $key: "xl");
+    max-width: map-get($map: $theme-breakpoints, $key: "xl");
     padding: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -131,7 +133,7 @@
     @extend %no-margin-y;
   }
 
-    /*
+  /*
    *  ----------
    *  ALIGNMENT
    *  ----------
@@ -170,4 +172,19 @@
   .children--align-stretch {
     display: flex;
     align-items: stretch;
+  }
+
+  /*
+   *  ----------
+   *  ZINDEX
+   *  ----------
+  */
+
+  @each $index, $value in $theme-zindex {
+    %zindex--#{$index} {
+      z-index: $value;
+    }
+    .zindex--#{$index} {
+      @extend %zindex--#{$index};
+    }
   }

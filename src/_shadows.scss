@@ -1,8 +1,8 @@
 /// setup classes for adding shadows
-/// @require $shadows
+/// @require $theme-shadows
 /// @see './variables'
 ///
-@each $shadowType, $shadowValue in $shadows {
+@each $shadowType, $shadowValue in $theme-shadows {
   .shadow--#{$shadowType} {
       box-shadow: $shadowValue;
   }

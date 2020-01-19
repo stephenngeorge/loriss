@@ -37,3 +37,73 @@
     animation-duration: $value;
   }
 }
+
+/*
+ *  ----------
+ *  SLIDES
+ *  ----------
+*/
+
+@keyframes slide-from-left {
+  from { transform: translateX(-1rem); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-from-right {
+  from { transform: translateX(1rem); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-from-top {
+  from { transform: translateY(-1rem); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slide-from-bottom {
+  from { transform: translateY(1rem); }
+  to { transform: translateY(0); }
+}
+
+%slide-from-left {
+  animation-name: slide-from-left;
+  animation-fill-mode: forwards;
+}
+
+%slide-from-right {
+  animation-name: slide-from-right;
+  animation-fill-mode: forwards;
+}
+
+%slide-from-top {
+  animation-name: slide-from-top;
+  animation-fill-mode: forwards;
+}
+
+%slide-from-bottom {
+  animation-name: slide-from-bottom;
+  animation-fill-mode: forwards;
+}
+
+/// @require $theme-animation-durations
+/// @see './_variables.scss
+@each $duration, $value in $theme-animation-durations {
+  .slide-from-left--#{$duration} {
+    @extend %slide-from-left;
+    animation-duration: $value;
+  }
+
+  .slide-from-right--#{$duration} {
+    @extend %slide-from-right;
+    animation-duration: $value;
+  }
+
+  .slide-from-top--#{$duration} {
+    @extend %slide-from-top;
+    animation-duration: $value;
+  }
+
+  .slide-from-bottom--#{$duration} {
+    @extend %slide-from-bottom;
+    animation-duration: $value;
+  }
+}

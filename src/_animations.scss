@@ -25,7 +25,7 @@
 }
 
 /// @require $theme-animation-durations
-/// @see './_variables.scss
+/// @see './_variables.scss'
 @each $duration, $value in $theme-animation-durations {
   .fade-in--#{$duration} {
     @extend %fade-in;
@@ -45,22 +45,22 @@
 */
 
 @keyframes slide-from-left {
-  from { transform: translateX(-1rem); }
+  from { transform: translateX(-$animation-distance); }
   to { transform: translateX(0); }
 }
 
 @keyframes slide-from-right {
-  from { transform: translateX(1rem); }
+  from { transform: translateX($animation-distance); }
   to { transform: translateX(0); }
 }
 
 @keyframes slide-from-top {
-  from { transform: translateY(-1rem); }
+  from { transform: translateY(-$animation-distance); }
   to { transform: translateY(0); }
 }
 
 @keyframes slide-from-bottom {
-  from { transform: translateY(1rem); }
+  from { transform: translateY($animation-distance); }
   to { transform: translateY(0); }
 }
 
@@ -85,7 +85,7 @@
 }
 
 /// @require $theme-animation-durations
-/// @see './_variables.scss
+/// @see './_variables.scss'
 @each $duration, $value in $theme-animation-durations {
   .slide-from-left--#{$duration} {
     @extend %slide-from-left;
@@ -110,22 +110,22 @@
 
 @keyframes slide-to-left {
   from { transform: translateX(0); }
-  to { transform: translateX(-1rem); }
+  to { transform: translateX(-$animation-distance); }
 }
 
 @keyframes slide-to-right {
   from { transform: translateX(0); }
-  to { transform: translateX(1rem); }
+  to { transform: translateX($animation-distance); }
 }
 
 @keyframes slide-to-top {
   from { transform: translateY(0); }
-  to { transform: translateY(-1rem); }
+  to { transform: translateY(-$animation-distance); }
 }
 
 @keyframes slide-to-bottom {
   from { transform: translateY(0); }
-  to { transform: translateY(1rem); }
+  to { transform: translateY($animation-distance); }
 }
 
 %slide-to-left {
@@ -168,6 +168,248 @@
 
   .slide-to-bottom--#{$duration} {
     @extend %slide-to-bottom;
+    animation-duration: $value;
+  }
+}
+
+/*
+ *  ----------
+ *  SLIDE & FADE
+ *  ----------
+*/
+
+// -----
+// SLIDE FROM - FADE IN
+@keyframes slide-from-left__fade-in {
+  from { opacity: 0; transform: translateX(-$animation-distance); }
+  to { opacity: 1; transform: translateX(0); }
+}
+%slide-from-left__fade-in {
+  animation-name: slide-from-left__fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-right__fade-in {
+  from { opacity: 0; transform: translateX($animation-distance); }
+  to { opacity: 1; transform: translateX(0); }
+}
+%slide-from-right__fade-in {
+  animation-name: slide-from-right__fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-top__fade-in {
+  from { opacity: 0; transform: translateY(-$animation-distance); }
+  to { opacity: 1; transform: translateY(0); }
+}
+%slide-from-top__fade-in {
+  animation-name: slide-from-top__fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-bottom__fade-in {
+  from { opacity: 0; transform: translateY($animation-distance); }
+  to { opacity: 1; transform: translateY(0); }
+}
+%slide-from-bottom__fade-in {
+  animation-name: slide-from-bottom__fade-in;
+  animation-fill-mode: forwards;
+}
+
+// -----
+// SLIDE FROM - FADE OUT
+@keyframes slide-from-left__fade-out {
+  from { opacity: 1; transform: translateX(-$animation-distance); }
+  to { opacity: 0; transform: translateX(0); }
+}
+%slide-from-left__fade-out {
+  animation-name: slide-from-left__fade-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-right__fade-out {
+  from { opacity: 1; transform: translateX($animation-distance); }
+  to { opacity: 0; transform: translateX(0); }
+}
+%slide-from-right__fade-out {
+  animation-name: slide-from-right__fade-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-top__fade-out {
+  from { opacity: 1; transform: translateY(-$animation-distance); }
+  to { opacity: 0; transform: translateY(0); }
+}
+%slide-from-top__fade-out {
+  animation-name: slide-from-top__fade-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-from-bottom__fade-out {
+  from { opacity: 1; transform: translateY($animation-distance); }
+  to { opacity: 0; transform: translateY(0); }
+}
+%slide-from-bottom__fade-out {
+  animation-name: slide-from-bottom__fade-out;
+  animation-fill-mode: forwards;
+}
+
+// -----
+// SLIDE TO - FADE IN
+@keyframes slide-to-left__fade-in {
+  from { opacity: 0; transform: translateX(0); }
+  to { opacity: 1; transform: translateX(-$animation-distance); }
+}
+%slide-to-left__fade-in {
+  animation-name: slide-to-left__fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-right__fade-in {
+  from { opacity: 0; transform: translateX(0); }
+  to { opacity: 1; transform: translateX($animation-distance); }
+}
+%slide-to-right__fade-in {
+  animation-name: slide-to-right__fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-top__fade-in {
+  from { opacity: 0; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(-$animation-distance); }
+}
+%slide-to-top__fade-in {
+  animation-name: slide-to-top__fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-bottom__fade-in {
+  from { opacity: 0; transform: translateY(0); }
+  to { opacity: 1; transform: translateY($animation-distance); }
+}
+%slide-to-bottom__fade-in {
+  animation-name: slide-to-bottom__fade-in;
+  animation-fill-mode: forwards;
+}
+
+// -----
+// SLIDE TO - FADE OUT
+@keyframes slide-to-left__fade-out {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-$animation-distance); }
+}
+%slide-to-left__fade-out {
+  animation-name: slide-to-left__fade-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-right__fade-out {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX($animation-distance); }
+}
+%slide-to-right__fade-out {
+  animation-name: slide-to-right__fade-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-top__fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-$animation-distance); }
+}
+%slide-to-top__fade-out {
+  animation-name: slide-to-top__fade-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-bottom__fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY($animation-distance); }
+}
+%slide-to-bottom__fade-out {
+  animation-name: slide-to-bottom__fade-out;
+  animation-fill-mode: forwards;
+}
+
+/// @require $theme-animation-durations
+/// @see './_variables.scss'
+@each $duration, $value in $theme-animation-durations {
+  .slide-from-left__fade-in--#{$duration} {
+    @extend %slide-from-left__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-from-right__fade-in--#{$duration} {
+    @extend %slide-from-right__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-from-top__fade-in--#{$duration} {
+    @extend %slide-from-top__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-from-bottom__fade-in--#{$duration} {
+    @extend %slide-from-bottom__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-to-left__fade-in--#{$duration} {
+    @extend %slide-to-left__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-to-right__fade-in--#{$duration} {
+    @extend %slide-to-right__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-to-top__fade-in--#{$duration} {
+    @extend %slide-to-top__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-to-bottom__fade-in--#{$duration} {
+    @extend %slide-to-bottom__fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-from-left__fade-out--#{$duration} {
+    @extend %slide-from-left__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-from-right__fade-out--#{$duration} {
+    @extend %slide-from-right__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-from-top__fade-out--#{$duration} {
+    @extend %slide-from-top__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-from-bottom__fade-out--#{$duration} {
+    @extend %slide-from-bottom__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-to-left__fade-out--#{$duration} {
+    @extend %slide-to-left__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-to-right__fade-out--#{$duration} {
+    @extend %slide-to-right__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-to-top__fade-out--#{$duration} {
+    @extend %slide-to-top__fade-out;
+    animation-duration: $value;
+  }
+
+  .slide-to-bottom__fade-out--#{$duration} {
+    @extend %slide-to-bottom__fade-out;
     animation-duration: $value;
   }
 }

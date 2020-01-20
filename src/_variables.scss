@@ -230,11 +230,14 @@ $theme-zindex: map-merge($loris-zindex, $zindex) !default;
 // ------- ANIMATIONS
 
 /// @type Number
-$animation-duration--fast: .2s !default;
+$animation-distance:          1rem !default;
+
 /// @type Number
-$animation-duration--medium: .4s !default;
+$animation-duration--fast:    .2s !default;
 /// @type Number
-$animation-duration--slow: .8s !default;
+$animation-duration--medium:  .4s !default;
+/// @type Number
+$animation-duration--slow:    .8s !default;
 
 /// @type Map
 $loris-animation-durations: (

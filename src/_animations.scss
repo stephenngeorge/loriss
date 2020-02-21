@@ -1,5 +1,77 @@
 /*
  *  ----------
+ *  SCALE
+ *  ----------
+*/
+@keyframes grow-in-x {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes grow-in-y {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+%grow-in-x {
+  animation-name: grow-in-x;
+  animation-fill-mode: forwards;
+}
+
+%grow-in-y {
+  animation-name: grow-in-y;
+  animation-fill-mode: forwards;
+}
+
+/// @require $theme-animation-durations
+/// @see './_variables.scss'
+@each $duration, $value in $theme-animation-durations {
+  .grow-in-x--#{$duration} {
+    @extend %grow-in-x;
+    animation-duration: $value;
+  }
+
+  .grow-in-y--#{$duration} {
+    @extend %grow-in-y;
+    animation-duration: $value;
+  }
+}
+
+@keyframes grow-out-x {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+
+@keyframes grow-out-y {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0); }
+}
+
+%grow-out-x {
+  animation-name: grow-out-x;
+  animation-fill-mode: forwards;
+}
+
+%grow-out-y {
+  animation-name: grow-out-y;
+  animation-fill-mode: forwards;
+}
+
+/// @require $theme-animation-durations
+/// @see './_variables.scss'
+@each $duration, $value in $theme-animation-durations {
+  .grow-out-x--#{$duration} {
+    @extend %grow-out-x;
+    animation-duration: $value;
+  }
+  .grow-out-y--#{$duration} {
+    @extend %grow-out-y;
+    animation-duration: $value;
+  }
+}
+
+/*
+ *  ----------
  *  FADES
  *  ----------
 */
